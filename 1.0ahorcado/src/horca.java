@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,46 +12,45 @@
  * @author Pablo
  */
 public class horca {
-   
-     public int vidas;
-    
-    
-    public horca(){  //Construcor
-        opciones();
-        
-    }
-    Integer opcion=0;
-    
-    public void setMenu(int opc){
-        
-        opcion=opc; //obtener valor para el menú
-        
-        
-        switch(opcion){
-            case 1: //caso 1 = Empezar el juego
-                System.out.println("Empezar juego"); 
+    Random random = new Random(9);
+    String [] arregloAutos = {"Mercedes", "Toyota", "Isuzu", "Hyundai", "Daihatsu", "Ford", "Dodge", "Mitsubishi" ,"Ferrari" , "Honda"};
+    String [] arregloAnimales = {"Perro" , "Gato", "Conejo", "Ardilla", "Elefante","Canguro", "Vaca", "Rinoceronte", "Jirafa","Camello"};
+    String [] arregloPaises = {"España","Alemania","Colombia","Brasil","Panama","Mexico","Ecuador","Francia","Italia","Inglaterra"};
+    String [] arregloMarcas = {"Apple","Dell","Aeropostale","Samsung","Sony","Levis", "Nike", "Adidas", "Arenas","Panasonic"};
+    String [] arregloNombre = {"Carlos","Felipe","Nicole","Maria","Pablo","Mariela","Juan", "Pedro","Manuel", "Laura"};        
+               
+    public String Carga_palabras(String categoria){
+        String palabra;
+        switch(categoria){
+            case "1":
                 
                 break;
+            case "2":
                 
-            case 2:
-                System.out.println("Categorias"); //Seleccionar la caategoria
+            break;
                 
-                break;
-            case 3:
-                System.out.println("Salir"); //Salir del juego
+            case "3":
                 
-                break;
+            break;
                 
-            default:
-                    throw new AssertionError();
-                    
+            case "4":
+                            break;
+                
+            case "5":
+                
+            break;                
         }
+            
+        return palabra;
     }
-               public void opciones(){
-                   System.out.println("1: Empezar juego");
-                   System.out.println("2: Seleccionar categoria");
-                   System.out.println("3: Salir");
-                   
-               }
+    private int selccionRamdon(){
+        int numRandom;
+        
+        numRandom=random.nextInt();
+        
+        return numRandom;
+    }
+    
+    
                
 }

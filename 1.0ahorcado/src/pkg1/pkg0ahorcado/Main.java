@@ -16,7 +16,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-   
+    Menu_principal Menu = new Menu_principal(); //Cronstructor del Menu principal
+        Menu.Menu_principal();
     }
     
 }
